@@ -1,0 +1,124 @@
+body {
+	background: #120e14;
+	color: rgb(185, 180, 169);
+	font-family: 'Fira Mono', monospace;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-bottom: 120px;
+	padding: 0px;
+	max-width: 550px;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 120%;
+}
+
+@media screen and (max-width: 630px) {
+	body {
+		padding: 0px 40px;
+	}
+}
+
+header {
+	margin: 30px 0px 30px;
+}
+
+header .site-title a {
+	text-decoration: none;
+}
+
+header .devlog-title {
+	font-weight: bold;
+}
+
+header h1 a {
+	color: rgb(185, 180, 169);
+}
+
+a {
+	color: rgb(0, 170, 0);
+	text-decoration: none;
+}
+
+.underline:hover {
+	color: rgb(0, 170, 0);
+}
+
+.underline {
+	position: relative;
+}
+
+.underline::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: rgb(0, 170, 0);
+	transform-origin: bottom right;
+	transform: scaleX(0);
+	transition: transform 0.5s ease;
+}
+
+.underline:hover::before {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+
+.highlight {
+	color: rgb(185, 180, 169);
+	position: relative;
+	z-index: 1;
+}
+
+.highlight::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: -0.25em;
+	right: -0.25em;
+	background-color: rgb(0, 170, 0);
+	transform-origin: bottom center;
+	transform: scaleY(0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+.highlight:hover::before {
+	transform: scaleY(1);
+	background-color: rgb(0, 170, 0);
+}
+
+.centered {
+	margin: 0px auto 40px;
+	display: block;
+}
+
+.yellow-txt {
+	color: yellow;
+}
+
+.cyan-txt {
+	color: cyan;
+}
+
+.red-txt {
+	color: red;
+}
+
+.green-txt {
+	color: rgb(0, 170, 0);
+}
+
+.gray-txt {
+	color: gray;
+}
+
+pre {
+	max-width: 850px;
+	overflow: scroll;
+	padding: 15px 15px;
+	font-size: 14px;
+}
